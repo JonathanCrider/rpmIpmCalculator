@@ -39,6 +39,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
+  flex: 2;
 }
 
 .read-the-docs {
