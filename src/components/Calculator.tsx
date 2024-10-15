@@ -31,12 +31,3 @@ function Calculator() {
 }
 
 export default Calculator
-
-
-// rpmCalc() {
-//   this.rpm = (this.sfm * 3.82) / this.dia;
-// }
-
-// ipmCalc() {
-//   this.ipm = this.rpm * this.numTeeth * this.cpt;
-// }
