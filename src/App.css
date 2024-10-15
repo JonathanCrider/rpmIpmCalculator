@@ -35,8 +35,16 @@
 
 .calculator{
   padding: 2em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .read-the-docs {
   color: #888;
+}
+
+button {
+  margin: .5em;
 }

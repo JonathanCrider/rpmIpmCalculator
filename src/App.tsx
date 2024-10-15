@@ -5,7 +5,7 @@ import Calculator from './components/Calculator'
 function App() {
   return (
     <>
-      <Logo/>
+      {/* <Logo/> */}
       <h1>RPM/IPM Calculator</h1>
       <Calculator/>
     </>
