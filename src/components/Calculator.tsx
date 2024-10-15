@@ -9,6 +9,13 @@ function Calculator() {
   const [rpm, setRpm] = useState(0)
   const [ipm, setIpm] = useState(0)
 
+  function results () {
+    const rpm = (sfm * 3.82) / dia
+    setRpm(rpm)
+    setIpm(rpm * numTeeth * cpt)
+    return
+  }
+
   return (
     <>
       <div className='calculator'>
@@ -18,10 +25,7 @@ function Calculator() {
         <input name='sfm' type='number' placeholder='SFM' onChange={e => setSfm(parseFloat(e.target.value))}/>
         <input name='cpt' type='number' placeholder='CPT' onChange={e => setCpt(parseFloat(e.target.value))}/>
         <input name='teeth' type='number' placeholder='number of teeth' onChange={e => setNumTeeth(parseFloat(e.target.value))}/>
-        <button onClick={() => {
-            setRpm((sfm * 3.82) / dia)
-            setIpm(rpm * numTeeth * cpt)
-          }}
+        <button onClick={() => results()}
         >
           Calculate
         </button>
