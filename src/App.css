@@ -33,15 +33,6 @@
   }
 }
 
-.calculator{
-  padding: 2em;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  flex: 2;
-}
-
 .read-the-docs {
   color: #888;
 }

@@ -1,0 +1,19 @@
+.calculator {
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* flex: 2; */
+}
+
+.results {
+  background-color: grey;
+  color: white;
+  cursor: not-allowed;
+}
+
+button {
+  background-color: #001489;
+  color: white;
+}
