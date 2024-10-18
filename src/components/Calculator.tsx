@@ -19,15 +19,31 @@ function Calculator() {
   return (
     <>
       <div className='calculator'>
-        <input className='results' name='rpm' type='number' placeholder='RPM' disabled value={rpm || undefined}/>
-        <input className='results' name='ipm' type='number' placeholder='IPM' disabled value={ipm || undefined}/>
-        <input name='dia' type='number' placeholder='diameter' onChange={e => setDia(parseFloat(e.target.value))}/>
-        <input name='sfm' type='number' placeholder='SFM' onChange={e => setSfm(parseFloat(e.target.value))}/>
-        <input name='cpt' type='number' placeholder='CPT' onChange={e => setCpt(parseFloat(e.target.value))}/>
-        <input name='teeth' type='number' placeholder='number of teeth' onChange={e => setNumTeeth(parseFloat(e.target.value))}/>
-        <button onClick={() => results()}>
-          Calculate
-        </button>
+        <div className='row'>
+          <label>RPM</label>
+          <input className='results' name='rpm' type='number' placeholder='RPM' disabled value={rpm || undefined}/>
+        </div>
+        <div className='row'>
+          <label>IPM</label>
+          <input className='results' name='ipm' type='number' placeholder='IPM' disabled value={ipm || undefined}/>
+        </div>
+        <div className='row'>
+          <input name='dia' type='number' placeholder='diameter' onChange={e => setDia(parseFloat(e.target.value))}/>
+        </div>
+        <div className='row'>
+          <input name='sfm' type='number' placeholder='SFM' onChange={e => setSfm(parseFloat(e.target.value))}/>
+        </div>
+        <div className='row'>
+          <input name='cpt' type='number' placeholder='CPT' onChange={e => setCpt(parseFloat(e.target.value))}/>
+        </div>
+        <div className='row'>
+          <input name='teeth' type='number' placeholder='number of teeth' onChange={e => setNumTeeth(parseFloat(e.target.value))}/>
+        </div>
+        <div className='row'>
+          <button onClick={() => results()}>
+            Calculate
+          </button>
+        </div>
       </div>
     </>
   )
