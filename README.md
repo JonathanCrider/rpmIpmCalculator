@@ -1,5 +1,7 @@
 # RPM/IPM Calculator
 
+Deployed using AWS Amplify
+
 Hosted at [calculator.jonathandev.coffee/](https://calculator.jonathandev.coffee/)
 
 ## React + Typescript + Vite
