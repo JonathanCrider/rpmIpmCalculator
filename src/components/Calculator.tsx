@@ -49,7 +49,6 @@ function Calculator() {
     previous: React.RefObject<HTMLInputElement> | null,
     next: React.RefObject<HTMLInputElement> | null
   ) => {
-    console.log(e.key)
     if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
       e.preventDefault()
       if (e.key === 'ArrowUp' && previous?.current) previous.current.focus()
