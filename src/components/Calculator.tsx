@@ -39,9 +39,19 @@ function Calculator() {
     return
   }
 
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    console.log(e.key)
+    if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
+      e.preventDefault()
+    }
+    if (e.key === 'Enter') {
+      results()
+    }
+  }
+
   return (
     <>
-      <div className='calculator'>
+      <div className='calculator' onKeyDown={handleKeyDown}>
         <div className='row'>
           <label>RPM</label>
           <input className='results' name='rpm' type='number' placeholder='RPM' disabled value={state.rpm || undefined}/>
@@ -51,16 +61,16 @@ function Calculator() {
           <input className='results' name='ipm' type='number' placeholder='IPM' disabled value={state.ipm || undefined}/>
         </div>
         <div className='row'>
-          <input name='dia' type='number' placeholder='diameter' onChange={e => dispatch({ type: SET_DIA, payload: parseFloat(e.target.value)})}/>
+          <input name='dia' type='number' placeholder='diameter' onChange={e => dispatch({ type: SET_DIA, payload: +e.target.value})}/>
         </div>
         <div className='row'>
-          <input name='sfm' type='number' placeholder='SFM' onChange={e => dispatch({ type: SET_SFM, payload: parseFloat(e.target.value)})}/>
+          <input name='sfm' type='number' placeholder='SFM' onChange={e => dispatch({ type: SET_SFM, payload: +e.target.value})}/>
         </div>
         <div className='row'>
-          <input name='cpt' type='number' placeholder='CPT' onChange={e => dispatch({ type: SET_CPT, payload: parseFloat(e.target.value)})}/>
+          <input name='cpt' type='number' placeholder='CPT' onChange={e => dispatch({ type: SET_CPT, payload: +e.target.value})}/>
         </div>
         <div className='row'>
-          <input name='teeth' type='number' placeholder='number of teeth' onChange={e => dispatch({ type: SET_NUM_TEETH, payload: parseFloat(e.target.value)})}/>
+          <input name='teeth' type='number' placeholder='number of teeth' onChange={e => dispatch({ type: SET_NUM_TEETH, payload: +e.target.value})}/>
         </div>
         <div className='row'>
           <button onClick={() => results()}>
