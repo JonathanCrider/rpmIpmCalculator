@@ -2,7 +2,7 @@
 
 Deployed using AWS Amplify
 
-Hosted at [calculator.jonathandev.coffee](https://calculator.jonathandev.coffee){:target="_blank"}
+Hosted at <a href="https://calculator.jonathandev.coffee" target="_blank">calculator.jonathandev.coffee</a>
 
 ## React + Typescript + Vite
 
